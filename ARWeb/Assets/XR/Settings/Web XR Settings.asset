@@ -15,4 +15,4 @@ MonoBehaviour:
   VRRequiredReferenceSpace: 2
   VROptionalFeatures: 1
   ARRequiredReferenceSpace: 2
-  AROptionalFeatures: 1
+  AROptionalFeatures: 2147483647
