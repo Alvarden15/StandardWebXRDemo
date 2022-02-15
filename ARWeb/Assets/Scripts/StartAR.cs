@@ -8,11 +8,25 @@ using WebXR;
 public class StartAR : MonoBehaviour
 {
 
-    
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        if (WebXRManager.Instance.isSupportedAR)
+        {
+            WebXRManager.Instance.ToggleAR();
+        }
+        else
+        {
+            Debug.Log("Estandar");
+        }
+    }
+
     void Start()
     {
-        
+        //WebXRManager.Instance.ToggleAR();
+
+
+
+        //subsystem?.ToggleAR();
     }
 
     // Update is called once per frame
