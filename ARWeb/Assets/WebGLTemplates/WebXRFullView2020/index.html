@@ -79,10 +79,8 @@
           }
 
           if(isAR){
-            setTimeout(unityInstance.Module.WebXR.toggleAR(),10000);
+            setTimeout(function(){document.getElementById('enterar').click()},4500);
             
-          }else{
-            alert("No tiene AR");
           }
         }).catch((message) => {
           alert(message);
