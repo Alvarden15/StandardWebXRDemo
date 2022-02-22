@@ -22,8 +22,10 @@ public class ExternalAddressables : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _ = Cargar(array);
+
         //StartCoroutine(CargarModelo());
+
+        StartCoroutine(CargarNormal(array));
     }
 
     public async Task Cargar(string label)
@@ -41,24 +43,36 @@ public class ExternalAddressables : MonoBehaviour
     }
 
     /*
-     public void CargarNormal(string label)
+    
+     */
+
+    IEnumerator CargarNormal(string label)
     {
 
-        var locations = Addressables.LoadResourceLocations(label).Result;
+        var locations = Addressables.LoadResourceLocationsAsync(label);
 
-        foreach (var location in locations)
+        yield return locations;
+
+        if(locations.Status == AsyncOperationStatus.Succeeded)
         {
-            await Addressables.Instantiate(location.);
+            foreach (var location in locations.Result)
+            {
+                Addressables.InstantiateAsync(location);
+            }
         }
+        else
+        {
+            Debug.Log("Error en la importacion");
+        }
+
         //modelReference.InstantiateAsync();
 
 
     }
-     */
-
 
     IEnumerator CargarModelo()
     {
+        var objetos = Addressables.LoadResourceLocationsAsync(array);
         var objeto = Addressables.LoadAssetAsync<GameObject>("Assets/Models/Column_3.fbx");
         //var objeto = Addressables.LoadAssetAsync<GameObject>("C:/Users/Computer/Documents/LocalModels/Column_3.fbx");
         yield return objeto;

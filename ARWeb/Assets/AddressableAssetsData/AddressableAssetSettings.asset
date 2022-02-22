@@ -91,7 +91,7 @@ MonoBehaviour:
       - m_Id: 1cd2303ba81afab46befb3da40d10d56
         m_Value: ServerData/[BuildTarget]
       - m_Id: 3038c1a03cf37f14aab8c07e80242498
-        m_Value: https://addressablesweb.blob.core.windows.net/[BuildTarget]
+        m_Value: https://s3.us-east-1.amazonaws.com/www1.sparxworks.com/Unity/Models/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: bf3c53cfc71057c41ab88358d6955adf
       m_Name: BuildTarget
@@ -126,7 +126,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4aa2303c567b0f5468a9450a35e18d53, type: 2}
   - {fileID: 11400000, guid: 7eb7cb0c3e5036d4bb32bf07fdf28e18, type: 2}
   - {fileID: 11400000, guid: 2c4d2d06b87f62e4bbf38447c420e3a7, type: 2}
-  m_ActiveProfileId: 4604fbbc48a875e4e9498c3b2febb651
+  m_ActiveProfileId: e3964eac768d6134386fbc675925687d
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
