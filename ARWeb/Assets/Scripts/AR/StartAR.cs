@@ -8,9 +8,11 @@ using WebXR;
 public class StartAR : MonoBehaviour
 {
 
+
     private void Awake()
     {
-        if (WebXRManager.Instance.isSupportedAR)
+        /*
+         if (WebXRManager.Instance.isSupportedAR)
         {
             WebXRManager.Instance.ToggleAR();
         }
@@ -18,6 +20,8 @@ public class StartAR : MonoBehaviour
         {
             Debug.Log("Estandar");
         }
+         */
+
     }
 
     void Start()
