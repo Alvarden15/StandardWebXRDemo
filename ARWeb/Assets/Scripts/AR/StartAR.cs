@@ -11,6 +11,7 @@ public class StartAR : MonoBehaviour
 
     private void Awake()
     {
+        
         /*
          if (WebXRManager.Instance.isSupportedAR)
         {
@@ -24,18 +25,25 @@ public class StartAR : MonoBehaviour
 
     }
 
-    void Start()
+    IEnumerator Start()
     {
-        //WebXRManager.Instance.ToggleAR();
 
+        //WebXRManager webXRManager = new WebXRManager();
+        yield return new WaitForSeconds(2f);
 
+        if (WebXRManager.Instance.isActiveAndEnabled)
+        {
+            Debug.Log("Activado");
+        }
+        else
+        {
+            Debug.Log("Desactivado");
+            //WebXRManager.OnXRChange();
+        }
+        //Debug.Log(webXRManager.XRState.ToString());
+        //webXRManager.XRState.ToString();
 
-        //subsystem?.ToggleAR();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
