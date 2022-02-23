@@ -543,7 +543,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1636910331}
+  m_Camera: {fileID: 1302711620}
   m_PlaneDistance: 3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -805,11 +805,11 @@ MonoBehaviour:
   Use:
     Filter: 0
     IgnoreStartedOverGui: 1
-    RequiredFingerCount: 1
-    RequiredMouseButtons: 1
+    RequiredFingerCount: 0
+    RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 192235435}
-  _camera: {fileID: 1636910331}
-  sensitivity: 1
+  _camera: {fileID: 1302711620}
+  sensitivity: 1.5
   damping: -1
   inertia: 0
   remainingTranslation: {x: 0, y: 0, z: 0}
@@ -1265,7 +1265,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1636910331}
+  m_Camera: {fileID: 1302711620}
   m_PlaneDistance: 3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deselectWithNothing: 0
-  limit: 1
+  limit: 2
   maxSelectables: 1
   reselect: 1
   selectables: []
@@ -1510,7 +1510,7 @@ MonoBehaviour:
       m_Bits: 4294967259
     Search: 1
     RequiredTag: 
-    Camera: {fileID: 1636910331}
+    Camera: {fileID: 1302711620}
     Distance: 50
   deselectWithFingers: 1
   onSelectedFinger:
@@ -1548,7 +1548,7 @@ MonoBehaviour:
         m_CallState: 2
   ScreenDepth:
     Conversion: 1
-    Camera: {fileID: 1636910331}
+    Camera: {fileID: 1302711620}
     Object: {fileID: 0}
     Layers:
       serializedVersion: 2
@@ -2272,7 +2272,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 1636910331}
+  m_Camera: {fileID: 1302711620}
   m_PlaneDistance: 3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3309,7 +3309,7 @@ TextMesh:
   m_TabSize: 4
   m_FontSize: 72
   m_FontStyle: 0
-  m_RichText: 1
+  m_RichText: 0
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
@@ -3660,6 +3660,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1611361787474004, guid: 54a613ba6e982e84db04156af08d6a89, type: 3}
   m_PrefabInstance: {fileID: 1302711618}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1302711620 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8992034749185188121, guid: 54a613ba6e982e84db04156af08d6a89, type: 3}
+  m_PrefabInstance: {fileID: 1302711618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1302711621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3727,9 +3732,9 @@ MonoBehaviour:
     RequiredFingerCount: 0
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 1308851731}
-  _camera: {fileID: 1636910331}
+  _camera: {fileID: 1302711620}
   relative: 0
-  sensitivity: 1
+  sensitivity: 1.5
   damping: -1
   remainingScale: {x: 0, y: 0, z: 0}
 --- !u!114 &1308851731
@@ -3862,16 +3867,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395986832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1395986834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4844,7 +4857,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: If you have an AR Ready Phone, press the AR Button on the bottom right
-    side of the screen.
+    side of the screen and start interacting.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5761,7 +5774,6 @@ GameObject:
   - component: {fileID: 2025183505}
   - component: {fileID: 2025183503}
   - component: {fileID: 2025183502}
-  - component: {fileID: 2025183504}
   - component: {fileID: 2025183508}
   m_Layer: 0
   m_Name: Rotateable
@@ -5824,29 +5836,6 @@ MonoBehaviour:
   onSelectedFingerUp:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2025183504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025183500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Use:
-    Filter: 0
-    IgnoreStartedOverGui: 1
-    RequiredFingerCount: 0
-    RequiredMouseButtons: 0
-    RequiredSelectable: {fileID: 2025183503}
-  _camera: {fileID: 1636910331}
-  relative: 0
-  damping: -1
-  remainingTranslation: {x: 0, y: 0, z: 0}
-  remainingRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!65 &2025183505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5917,7 +5906,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025183500}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc7c91b26689a054d88448aba6dfe424, type: 3}
   m_Name: 
@@ -5930,7 +5919,7 @@ MonoBehaviour:
     RequiredSelectable: {fileID: 2025183503}
   axis: {x: 0, y: -1, z: 0}
   space: 1
-  sensitivity: 1
+  sensitivity: 2
 --- !u!4 &2066780126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7e57e26a714804d3c9f1baa605131856, type: 3}
